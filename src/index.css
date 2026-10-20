@@ -1,0 +1,68 @@
+/* ===== index.css =====
+   Estilos globais: valem para o site inteiro.
+   Os estilos de cada componente e página ficam no App.module.css. */
+
+/* ---------- Cores do site (use com var(--nome)) ---------- */
+:root {
+  --terra: #b97452;    /* botões e destaques */
+  --verde: #1d3b33;    /* títulos e blocos verdes */
+  --cinza: #e8e8e8;    /* fundos claros */
+  --grafite: #3a3a38;  /* cartões e blocos escuros */
+  --laranja: #d9531e;  /* botão de destaque */
+  --borda: #d4d4d4;    /* linhas e contornos */
+}
+
+/* ---------- Reset e base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* ---------- Formulários ---------- */
+label {
+  display: grid;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  font: 12px Inter;
+  padding: 9px 10px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* ---------- Acessibilidade ---------- */
+/* contorno visível ao navegar com o teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--terra);
+  outline-offset: 2px;
+}
