@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth.jsx'
+import { brl } from '../data.js'
 import styles from '../App.module.css'
 
 const menu = ['Visão geral', 'Solicitações', 'Orçamentos', 'Pedidos', 'Meus dados']
@@ -13,7 +14,7 @@ function Lista({ itens, vazio }) {
     <ul className={styles.lista}>
       {itens.map((p) => (
         <li key={p.id}>
-          <div><b>{p.produtoNome}</b><small>Qtd. {p.quantidade} · {dataBR(p.data)}</small></div>
+          <div><b>{p.produtoNome}</b><small>Qtd. {p.quantidade}{p.precoUnitario ? ` · ${brl(p.precoUnitario * p.quantidade)}` : ''} · {dataBR(p.data)}</small></div>
           <span className={`${styles.status} ${p.status === 'Cancelada' ? styles.off : ''}`}>{p.status}</span>
           {p.status === 'Em análise' && <button className={styles.link} onClick={() => cancelar(p.id)}>Cancelar</button>}
         </li>

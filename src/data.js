@@ -4,6 +4,14 @@ import luva from './assets/luva.png'
 import mascara from './assets/mascara.png'
 import cinto from './assets/cinto.png'
 import macacao from './assets/macacao.png'
+import protetor_auricular from './assets/protetor-auricular.png'
+import abafador from './assets/abafador.png'
+import bota from './assets/bota.png'
+import protetor_facial from './assets/protetor-facial.png'
+import capacete_jugular from './assets/capacete-jugular.png'
+import talabarte from './assets/talabarte.png'
+import oculos_incolor from './assets/oculos-incolor.png'
+import colete from './assets/colete.png'
 
 // ATENÇÃO: os preços abaixo são EXEMPLOS. Troque pelos valores reais da empresa (em reais).
 export const brl = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
@@ -15,11 +23,20 @@ export const produtos = [
   { id: 'mascara', preco: 4.5, cat: 'protecao', nome: 'Máscara Respiratória Semifacial Carbografite CG521 PFF2', img: mascara },
   { id: 'cinto', preco: 189.9, cat: 'altura', nome: 'Cinto Paraquedista 3 Pontos de Ancoragem e Acolchoado Lombar Comfort Jo', img: cinto },
   {
-    id: 'macacao', preco: 29.9, cat: 'protecao', nome: 'Macacão de Proteção Branco  Danny SteelPro Type 6 ', img: macacao,
+    id: 'macacao', preco: 29.9, cat: 'protecao', nome: 'Macacão de Proteção Branco', img: macacao,
     marca: 'Danny SteelPro Type 6 (CA 20.662)',
     ca: 'Certificação comprovada: CA 20.662 válido até 26/04/2028',
     beneficios: ['Microporoso respirável', 'Proteção química comprovada', 'Excelente custo-benefício.', 'Tratamento antiestático'],
   },
+  // ----- Novos produtos (preços e imagens são EXEMPLOS: troque pelos reais) -----
+  { id: 'protetor-auricular', preco: 2.9, cat: 'protecao', nome: 'Protetor Auricular Tipo Plug', img: protetor_auricular },
+  { id: 'abafador', preco: 175.9, cat: 'protecao', nome: 'Abafador de Ruído', img: abafador },
+  { id: 'bota', preco: 89.9, cat: 'protecao', nome: 'Bota de Segurança', img: bota },
+  { id: 'colete', preco: 34.9, cat: 'protecao', nome: 'Colete Refletivo', img: colete },
+  { id: 'protetor-facial', preco: 22.9, cat: 'ocular', nome: 'Protetor Facial Incolor', img: protetor_facial },
+  { id: 'oculos-incolor', preco: 9.9, cat: 'ocular', nome: 'Óculos de Segurança Incolor', img: oculos_incolor },
+  { id: 'capacete-jugular', preco: 32.9, cat: 'capacetes', nome: 'Capacete com Jugular', img: capacete_jugular },
+  { id: 'talabarte', preco: 129.9, cat: 'altura', nome: 'Talabarte Duplo com Absorvedor', img: talabarte },
 ]
 
 export const nav = [

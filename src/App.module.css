@@ -736,6 +736,12 @@
 
 /* ---------- Solicitar orçamento ---------- */
 
+/* total estimado (preço x quantidade) */
+.total {
+  margin: 0;
+  font-size: 12px;
+}
+
 /* cartão do produto + formulário */
 .solicitar {
   display: grid;
