@@ -236,6 +236,14 @@
   font-size: 10px;
 }
 
+/* preço no cartão do produto */
+.preco {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--verde);
+}
+
 /* ---------- Página do produto ---------- */
 
 .produto {
@@ -300,6 +308,14 @@
   width: 220px;
   opacity: .9;
   z-index: -1;
+}
+
+/* preço grande na página do produto */
+.precoGrande {
+  margin: 8px 0 16px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--verde);
 }
 
 /* ---------- Base das páginas internas e Login ---------- */

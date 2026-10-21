@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { produtos } from '../data.js'
+import { produtos, brl } from '../data.js'
 import nr6 from '../assets/nr6.png'
 import colete from '../assets/colete.png'
 import styles from '../App.module.css'
@@ -13,9 +13,10 @@ export default function Produto() {
       <div className={styles.produtoInfo}>
         <h1>{p.nome.toUpperCase()}</h1>
         {p.marca && <p className={styles.marca}>{p.marca}</p>}
+        <p className={styles.precoGrande}>{brl(p.preco)}</p>
         <div className={styles.ca}><img src={nr6} alt="NR 6" /><strong>{p.ca || 'Certificação comprovada: CA ativo'}</strong></div>
         <ul className={styles.checks}>{(p.beneficios || ['Certificado com CA ativo']).map((b) => <li key={b}>{b}</li>)}</ul>
-        <Link className={[styles.btn, styles.btnLg].join(' ')} to={`/solicitar-orcamento?produto=${p.id}`}>Consultar preço</Link>
+        <Link className={[styles.btn, styles.btnLg].join(' ')} to={`/solicitar-orcamento?produto=${p.id}`}>Solicitar orçamento</Link>
       </div>
       <img className={styles.produtoSelo} src={colete} alt="" />
     </section>

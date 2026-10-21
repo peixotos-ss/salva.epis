@@ -1,5 +1,5 @@
 import { Link, useSearchParams } from 'react-router-dom'
-import { produtos } from '../data.js'
+import { produtos, brl } from '../data.js'
 import banner from '../assets/banner.png'
 import styles from '../App.module.css'
 
@@ -16,7 +16,8 @@ export default function Home() {
           <article key={p.id} className={styles.cardProduto}>
             <Link to={`/produto/${p.id}`}><div className={styles.foto}><img src={p.img} alt={p.nome} /></div></Link>
             <div className={styles.info}><h2>{p.nome}</h2>
-              <Link className={[styles.btn, styles.btnSm].join(' ')} to={`/solicitar-orcamento?produto=${p.id}`}>Preço sob consulta</Link></div>
+              <p className={styles.preco}>{brl(p.preco)}</p>
+              <Link className={[styles.btn, styles.btnSm].join(' ')} to={`/solicitar-orcamento?produto=${p.id}`}>Solicitar orçamento</Link></div>
           </article>
         ))}
       </div>
