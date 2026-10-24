@@ -30,7 +30,7 @@ export const produtos = [
   },
   // ----- Novos produtos (preços e imagens são EXEMPLOS: troque pelos reais) -----
   { id: 'protetor-auricular', preco: 2.9, cat: 'protecao', nome: 'Protetor Auricular Tipo Plug', img: protetor_auricular },
-  { id: 'abafador', preco: 175.9, cat: 'protecao', nome: 'Abafador de Ruído', img: abafador },
+  { id: 'abafador', preco: 45.9, cat: 'protecao', nome: 'Abafador de Ruído', img: abafador },
   { id: 'bota', preco: 89.9, cat: 'protecao', nome: 'Bota de Segurança', img: bota },
   { id: 'colete', preco: 34.9, cat: 'protecao', nome: 'Colete Refletivo', img: colete },
   { id: 'protetor-facial', preco: 22.9, cat: 'ocular', nome: 'Protetor Facial Incolor', img: protetor_facial },
@@ -54,3 +54,18 @@ export const diferenciais = [
 ]
 
 export const setores = ['Construção Civil', 'Indústria & Produção', 'Energia & Alta Voltagem', 'Laboratório & Química']
+
+// Contatos da empresa (usados na tela de Soluções)
+export const contato = {
+  telefone: '+55 41 8516-6977',
+  whatsapp: '554185166977', // só números, com DDI e DDD
+  email: 'brunolorenzet02@gmail.com',
+}
+
+export const linkWhatsapp = (msg = 'Olá! Vim pelo site da Salvação EPIs e gostaria de falar sobre EPIs.') =>
+  `https://wa.me/${contato.whatsapp}?text=${encodeURIComponent(msg)}`
+
+export const linkEmail = (
+  assunto = 'Contato pelo site – Salvação EPIs',
+  msg = 'Olá! Vim pelo site da Salvação EPIs e gostaria de falar sobre EPIs.',
+) => `mailto:${contato.email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(msg)}`
